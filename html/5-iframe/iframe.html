@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,20 @@
     <title>Iframes</title>
 </head>
 <body>
-    <h1>Uso de iframes en HTML</h1>
-    <iframe src="https://www.marca.com/" frameborder="0"></iframe>
+    <h1 class="title">Uso de iframes en HTML</h1>
+    <iframe 
+        src="./in-iframe.html" 
+        frameborder="0"
+        name="iframe" 
+        class="iframe">
+    </iframe>
+    <p class="link">
+        <a 
+            href="https://www.marca.com" 
+            target="iframe"
+            class="button">
+            Ver Marca.com en el iframe
+        </a>
+    </p>
 </body>
 </html>
