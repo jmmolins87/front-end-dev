@@ -1,0 +1,9 @@
+.table, th, td {
+    border: 1px solid #444;
+    border-collapse: collapse;
+    /* border-spacing: 5px; para separar los distintos bordes que tengamos */
+    padding: 5px;
+}
+.table {
+    width: 100%;
+}
