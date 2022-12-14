@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/forms.css">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1 class="title">Formularios en HTML</h1>
+    <form 
+        action="my-host" 
+        method="GET" 
+        target="_self"
+        autocomplete="on">
+        <!-- 
+            * El target puede ser _self para que se carge en la misma pestaña o _blank para abrir una nueva pestaña
+            * El autocomplete puede ser off u on 
+        -->
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name" class="d-block fw-700">Nombre:</label>
+            <input 
+                type="text" 
+                id="name" 
+                name="name"
+                placeholder="Escriba su nombre">
+            <label for="surname" class="d-block fw-700">Apellido:</label>
+            <input 
+                type="text" 
+                id="surname" 
+                name="surname"
+                placeholder="Escriba su apellido">
+            <label for="pass" class="d-block fw-700">Contraseña:</label>
+            <input 
+                type="password" 
+                id="pass" 
+                name="pass">
+            <label for="email" class="d-block fw-700">E-mail:</label>
+            <input 
+                type="email"  
+                id="email" 
+                name="email"
+                placeholder="Escriba su correo electrónico">
+            <label for="email" class="d-block fw-700">Edad:</label>
+            <input 
+                type="number"  
+                id="edad" 
+                name="edad"
+                min="0"
+                placeholder="Escriba su edad">
+        </fieldset>
+        <!-- ***** -->
+        <fieldset>
+            <legend>Datos de género</legend>
+            <label class="d-block fw-700 text-underline">Género</label>
+            <div>
+                <input 
+                    type="radio" 
+                    id="femenino" 
+                    name="genero" 
+                    value="femenino">
+                <label for="femenino">Femenino</label>
+            </div>
+            <div>
+                <input 
+                    type="radio" 
+                    id="masculino" 
+                    name="genero" 
+                    value="masculino">
+                <label for="masculino">Masculino</label>
+            </div>
+        </fieldset>
+        <!-- ***** -->
+        <fieldset>
+            <legend>Mi música</legend>
+            <label class="d-block fw-700 text-underline">Música favorita</label>
+            <div class="d-flex">
+                <input 
+                    type="checkbox" 
+                    id="clasica" 
+                    name="musica" 
+                    value="clasica">
+                <label for="clasica">Clásica</label>
+            </div>
+            <div class="d-flex">
+                <input 
+                    type="checkbox" 
+                    id="jazz" 
+                    name="musica" 
+                    value="jazz">
+                <label for="jazz">Jazz</label>
+            </div>
+        </fieldset>
+        <!-- ***** -->
+        <fieldset>
+            <legend>Mis marcas de coche</legend>
+            <label class="d-block fw-700 text-underline">Marca de coches favorita</label>
+            <select 
+                name="coches" 
+                id="coches" 
+                multiple="true">
+                <option value="audi" selected="true">Audi</option>
+                <option value="volvo">Volvo</option>
+                <option value="mercedez">Mercedez-Benz</option>
+                <option value="bmw">BMW</option>
+            </select>
+        </fieldset>
+        <!-- ***** -->
+        <fieldset>
+            <legend>Datos informativos</legend>
+            <label for="idPersona" class="d-block fw-700">Solo lectura</label>
+            <input 
+                type="text" 
+                id="idPersona" 
+                name="idPersona"
+                value="El id de la persona es: 1" 
+                readonly="true">
+        </fieldset>
+        <!-- ***** -->
+        <fieldset>
+            <legend>Opiniones</legend>
+            <label class="d-block fw-700 text-underline">Comentarios</label>
+            <textarea 
+                name="comentario" 
+                id="comentario" 
+                cols="30" 
+                rows="10">
+                Este es mi comentario
+            </textarea>
+        </fieldset>
+        <!-- ***** -->
+        <div class="d-flex">
+            <input type="submit" value="Enviar">
+            <input 
+                type="submit" 
+                value="Enviar sin validar" 
+                formnovalidate="formnovalidate">
+            <input type="reset" value="Restablecer el formulario">
+        </div>
+    </form>
+</body>
+</html>
