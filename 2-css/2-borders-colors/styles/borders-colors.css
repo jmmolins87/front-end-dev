@@ -1,0 +1,150 @@
+h2 {
+    text-align: center;
+}
+h3 {
+    padding: 5px;
+}
+.italic {
+    font-style: italic;
+}
+
+
+/* ***** */
+
+
+.text-white {
+    color: #fff;
+}
+.text-black {
+    color: #000;
+}
+.red {
+    /* background: #ec0000; */
+    border: 10px solid #ec0000;
+}
+.pink {
+    /* background: #ff69b4; */
+    border: 10px dashed #ff69b4;
+}
+.yellow {
+    /* background: #ffd700; */
+    border: 10px double #ffd700;
+}
+.violet {
+    /* background: #8a2be2; */
+    border: 10px dotted #8a2be2;
+}
+.green {
+    /* background: #00ff00; */
+    border: 10px solid #00ff00;
+}
+.blue {
+    /* background: #40e0d0; */
+    border: 10px solid #40e0d0;
+}
+
+
+/* *****  */
+
+
+.dotted-border {
+    border: dotted;
+}
+.dashed-border {
+    border: dashed;
+}
+.solid-border {
+    border: solid;
+}
+.double-border {
+    border: 5px double;
+}
+.groove-border {
+    border: 15px groove;
+}
+.ridge-border {
+    border: 15px ridge;
+}
+.inset-border {
+    border: 15px inset;
+}
+.outset-border {
+    border: 15px outset;
+}
+.none-border {
+    border: none;
+}
+.hidden-border {
+    border: hidden;
+}
+.mix-border {
+    border-width: 10px;
+    border-style: dashed dotted double solid;
+}
+
+
+/* *****  */
+
+
+.thin-border {
+    border-width: thin;
+    border-style: solid;
+}
+.medium-border {
+    border-width: medium;
+    border-style: solid;
+}
+.thick-border {
+    border-width: thick;
+    border-style: solid;
+}
+
+
+/* *****  */
+
+
+.color-hex {
+    border-color: #cc0000;
+    border-width: thick;
+    border-style: solid;
+}
+.color-hsl {
+    border-color: hsl(0, 100%, 40%);
+    border-width: thick;
+    border-style: solid;
+}
+.color-hwb {
+    border-color: hwb(0 0% 20%);
+    border-width: thick;
+    border-style: solid;
+}
+.color-rgb {
+    border-color: rgb(204, 0, 0);
+    border-width: thick;
+    border-style: solid;
+}
+.color-rgba {
+    border-color: rgba(204, 0, 0, .3);
+    border-width: thick;
+    border-style: solid;
+}
+
+
+/* *****  */
+
+
+.border-red {
+    border: 1px solid #cc0000;
+}
+.border-radius-20 {
+    border-radius: 20px;
+}
+.border-radius-top-20 {
+    border-radius: 20px 20px 0 0;
+}
+.border-radius-bottom-20 {
+    border-radius: 0 0 20px 20px;
+}
+.border-radius-random-20 {
+    border-radius: 20px 0 20px 0;
+}
