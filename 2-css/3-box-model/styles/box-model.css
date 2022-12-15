@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+.box-1 {
+    padding: 10px 5px 10px;
+    border: 15px solid #457d9d;
+    margin: 50px auto;
+    margin-left: 100px;
+    background: #f1faee;
+    width: 100%;
+    outline: 10px outset #cc0000; /* Podemos poner los mismos tipos de borde que en los borders */
+    outline-offset: 10px; /* Solo podemos poner un valor */
+    box-sizing: border-box; /* Incluye el padding en el tamaño completo */
+    max-width: 300px;
+}
+.box-1 p {
+    margin-left: inherit;
+}
+.box-2 {
+    padding: 10px 5px 10px;
+    border: 15px solid #457d9d;
+    margin: 30px auto;
+    margin-left: 100px;
+    background: #f1faee;
+    width: 100%;
+    outline: 10px outset #cc0000; /* Podemos poner los mismos tipos de borde que en los borders */
+    outline-offset: 10px; /* Solo podemos poner un valor */
+    box-sizing: border-box; /* Incluye el padding en el tamaño completo */
+    max-width: 300px;
+}
