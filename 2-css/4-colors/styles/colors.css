@@ -17,6 +17,11 @@ h1 {
     margin: 5px;
     float: left;
 }
+.box p,
+.box p .italic {
+    background: inherit;
+}
+
 .red {
     background: crimson;
 }
