@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+    color: crimson;
+}
+h3 {
+    text-align: center;
+    color: darkslategray;
+}
+p {
+    display: flex;
+    align-items: center;
+}
+.container {
+    max-width: 400px;
+    padding: 15px;
+    margin: auto;
+}
+.blue-icon {
+    font-size: 2.5em;
+    color: cornflowerblue;
+}
+.red-icon {
+    font-size: 2.5em;
+    color: crimson;
+}
+.material-symbols-outlined {
+    font-size: 2.5em;
+    color: fuchsia;
+}
+ion-icon {
+    font-size: 2.5em;
+    color: gold;
+}
