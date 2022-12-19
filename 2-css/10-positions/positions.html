@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/positions.css">
+    <title>Posiciones en CSS</title>
+</head>
+<body>
+    <h1>Posiciones en CSS</h1>
+    <div>Esta es una etiqueta div</div>
+    <hr>
+    <section>
+        <h2>Posicionamiento de tipo static</h2>
+        <div>Esta es una etiqueta div con posición <span class="italic-bold">static:</span> es la posición por defecto</div>
+    </section>
+    <hr>
+    <section>
+        <h2>Posicionamiento de tipo relative</h2>
+        <div class="p-relative">Esta es una etiqueta div con posición 
+            <span class="italic-bold">relative:</span> en este caso si nos afectan los atributos de top, bottom, left y right.
+            <p>top: -10px; left: 50px</p>
+        </div>
+    </section>
+    <section class="p-fixed">
+        <h2>Posicionamiento de tipo fixed</h2>
+        <div>Esta es una etiqueta div con posición 
+            <span class="italic-bold">fixed:</span> en este caso nuestra posición nos permite mantener un elemento siempre fijo y sin que ocupe espacio con el resto de elementos. También respeta los atributos de top, bottom, right y left.
+            <p>top: 50px; left: 40px</p>
+        </div>
+    </section>
+    <hr>
+    <section class="sec-pos-absolute">
+        <h2>Posicionamiento de tipo absolute</h2>
+        <div class="p-absolute">Esta es una etiqueta div con posición
+            <span class="italic-bold">absolute:</span> en este caso nuestra posición nos permite mantener el elemento en una posición relativa al padre.
+            <p>top: 30px; left: 50px; bottom: 0</p>
+        </div>
+    </section>
+    <hr>
+    <section class="p-sticky">
+        <h2>Posicionamiento de tipo sticky</h2>
+        <div>Esta es una etiqueta div con posición
+            <span class="italic-bold">sticky:</span> Cuándo salimos de la pantalla se comporta como una posición fixed, cuándo entramos en la pantalla se comporta por defecto. Si le ponemos un top, ese valor es en el que se va a cambiar la posición.
+            <p>top: 0</p>
+        </div>
+    </section>
+    <section>
+        <h2>Posicionamiento por capas (z-index)</h2>
+        <div>Esta es una etiqueta div con posición por defecto
+            <span class="italic-bold">(static):</span>
+        </div>
+        <div class="z-index">Esta es una etiqueta div con posición 
+            <span class="italic-bold">(relative)</span> y con un z-index de 1
+            <div class="z-indiex-absolute">bottom: -35px; right: 0</div>
+        </div>
+    </section>
+</body>
+</html>
