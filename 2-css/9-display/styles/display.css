@@ -1,0 +1,30 @@
+.container-block h2, div, p {
+    background: red;
+    color: white;
+}
+span {
+    background: yellow
+}
+.container-line {
+    background: green;
+    color: black;
+}
+.container-line p {
+    margin: 0;
+}
+.container-line .block {
+    display: block;
+    color: black;
+}
+.container-line a {
+    color: white;
+    display: block;
+}
+.container-line ul {
+    list-style: none;
+    padding: 0;
+}
+.container-line ul li {
+    color: white;
+    display: inline-block;
+} 
