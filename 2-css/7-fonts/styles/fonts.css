@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia|Roboto&shadow-multiple&display=swap');
+
+h1 {
+    color: #ef476f;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #ced4da;
+    font-family: 'Sofia', cursive;
+    /* font: font-style, font-variant, font-weight, font-size/line-height, font-family  */
+}
+.italic {
+    font-style: italic;
+    display: block;
+}
+.wrap-boxes {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.box {
+    padding: 5px;
+    min-width: 45%;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+}
+.box.serif {
+    background: #5a189a;
+}
+.time-font {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-variant: small-caps;
+}
+.georgia-font {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.box.sans-serif {
+    background: #00b4d8;
+}
+.arial-font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    font-weight: bolder;
+}
+.verdana-font {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.box.monospace {
+    background: #f15bb5;
+}
+.courier-font {
+    font-family: 'Courier New', Courier, monospace;
+}
+.lucida-font {
+    font-family: 'Lucida Handwriting', 'Lucida Sans Regular';
+}
+.box.roboto {
+    background: #65f15b;
+}
+.roboto-font {
+    font-family: 'Roboto', sans-serif;
+}
