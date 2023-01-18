@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Posiciones en CSS</h1>
-    <div>Esta es una etiqueta div</div>
+    <div><span>Esta es una etiqueta div</span></div>
     <hr>
     <section>
         <h2>Posicionamiento de tipo static</h2>
@@ -53,7 +53,77 @@
         </div>
         <div class="z-index">Esta es una etiqueta div con posición 
             <span class="italic-bold">(relative)</span> y con un z-index de 1
-            <div class="z-indiex-absolute">bottom: -35px; right: 0</div>
+            <div class="z-indiex-absolute"><span class="italic-bold">(absolute)</span>bottom: -35px; right: 0</div>
+        </div>
+    </section>
+    <section class="img-text-center">
+        <h2>Imágen con texto centrado</h2>
+        <div class="container">
+            <img 
+                src="http://globalmentoring.com.mx/imagenes/html5.png" 
+                alt="html5" 
+                title="html5" 
+                class="img">
+            <span class="center">Logo HTML5</span>
+        </div>
+    </section>
+    <section class="overflow">
+        <h2>Propiedad Overflow CSS</h2>
+        <div class="container">
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+        </div>
+    </section>
+    <section class="float">
+        <h2>Propiedad Float CSS</h2>
+        <div class="container">
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+        </div>
+        <div class="container">
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+        </div>
+        <div class="container">
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+        </div>
+        <div class="container">
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+        </div>
+        <div class="container">
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+        </div>
+        <div class="floated">
+            <div class="container floated container-one">
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+            </div>
+            <div class="container floated container-two">
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+            </div>
+            <div class="container floated container-three">
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, cum!</span>
+            </div>
+        </div>
+    </section>
+    <section class="display-inline-block">
+        <h2>Propiedad display inline-block CSS</h2>
+        <nav>
+            <ul>
+                <li><a href="javascript:;">Inicio</a></li>
+                <li><a href="javascript:;">Servicio</a></li>
+                <li><a href="javascript:;">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <p>Lorem ipsum dolor <span>sit amet consectetur adipisicing elit.</span> Aliquid veniam ea error minima a sint explicabo non necessitatibus, nobis ut ipsa fuga illum ratione, ab beatae, velit molestias impedit tempora.</p>
         </div>
     </section>
 </body>
