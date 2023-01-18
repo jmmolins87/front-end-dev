@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+.container {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+    color: #fff;
+}
+.container:first-child {
+    margin-top: 0;
+}
+.container.linear-gradient {
+    background: linear-gradient(#f72585, #3a0ca3) no-repeat;
+}
+.container.linear-gradient-to-left {
+    background: linear-gradient(to left, #f72585, #3a0ca3) no-repeat;
+}
+.container.linear-gradient-to-top {
+    background: linear-gradient(to top, #f72585, #3a0ca3) no-repeat;
+}
+.container.linear-gradient-to-deg {
+    background: linear-gradient(150deg, #f72585, #3a0ca3) no-repeat;
+}
+.container.radial-gradient {
+    background: radial-gradient(#3a0ca3, #f72585) no-repeat;
+}
+.shadow-title {
+    text-shadow: 2px 2px 5px grey;
+}
+.container.shadow {
+    box-shadow: 2px 2px 5px 20px grey;
+}
