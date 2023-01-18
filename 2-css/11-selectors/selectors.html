@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/selectors.css">
+    <title>Selectores en CSS</title>
+</head>
+<body>
+    <h1>Selectores combinados en CSS</h1>
+    <div class="container descendant">
+        <h2>Selectores descendientes (en cualquier nivel interno)</h2>
+        <p>Primer párrafo</p>
+        <p>Segundo párrafo</p>
+        <section>
+            <p>Tercer párrafo (dentro de una etiqueta section)</p>
+        </section>
+    </div>
+    <div class="container child">
+        <h2>Selectores hijo (child - seleccionamos los hijos directos solamente)</h2>
+        <p>Primer párrafo</p>
+        <p>Segundo párrafo</p>
+        <section>
+            <p>Tercer párrafo (dentro de una etiqueta section)</p>
+        </section>
+        <div>
+            <p>Cuarto párrafo (dentro de una etiqueta div)</p>
+        </div>
+        <p>Quinto párrafo</p>
+    </div>
+    <div class="container adjacent">
+        <h2>Selectores adyacente (es el selector justo después del padre, sin estar dentro padre)</h2>
+        <p>Primer párrafo</p>
+    </div>
+    <p>Esto es un párrafo y se van a aplicar los estilos</p>
+    <span>Esto es un span y no se van a aplicar los estilos</span>
+    <p>Esto es un párrafo y no se van a aplicar los estilos</p>
+    <div class="container brother">
+        <h2>Selectores hermano (es el mismo selector hemano justo después del padre, sin estar dentro del padre)</h2>
+        <p>Primer párrafo</p>
+    </div>
+    <p>Esto es un párrafo y se van a aplicar los estilos</p>
+    <span>Esto es un span y no se van a aplicar los estilos</span>
+    <p>Esto es un párrafo y no se van a aplicar los estilos</p>
+    <div class="container show">
+        <h2>Pseudo Clases en CSS</h2>
+        <p>Pasa por encima</p>
+        <div class="container hidden">
+            <p>Este es el primer párrafo</p>
+        </div>
+        <p>Este es el segundo párrafo</p>
+    </div>
+    <div class="container pseudoelement">
+        <h2>Pseudo Elementos en CSS</h2>
+        <p>Seleccione este texto</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae, dolores ipsa quam officiis, quidem vero sed mollitia sit doloribus praesentium ratione in consequatur molestias, rem illum cumque ullam ipsum.</p>
+    </div>
+    <div class="container transparent">
+        <h2>Transparencias en imagenes en CSS</h2>
+        <p>pasa por encima de la imagen</p>
+        <img src="http://globalmentoring.com.mx/imagenes/html5.png" alt="HTML5" title="HTML5">
+    </div>
+</body>
+</html>

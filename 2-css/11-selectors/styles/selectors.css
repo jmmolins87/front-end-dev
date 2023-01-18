@@ -1,0 +1,74 @@
+h1 {
+    text-align: center;
+    color: #e63946;
+}
+h2 {
+    text-align: center;
+    color: #0b4d4d;
+}
+.container {
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #0b4d4d;
+    padding: 15px;
+    color: #457b9d;
+    margin-top: 25px;
+}
+.container:first-child {
+    margin-top: 0;
+}
+.container.descendant p {
+    background: #fdffb6;
+    padding: 5px;
+}
+.container.child > p {
+    background: #fdffb6;
+    padding: 5px;
+}
+.container.adjacent + p {
+    background: #fdffb6;
+    padding: 5px;
+}
+.container.brother ~ p {
+    background: #fdffb6;
+    padding: 5px;
+}
+.container.show:hover .container.hidden {
+    display: block;
+    background: #fdffb6;
+}
+.container.hidden {
+    display: none;
+}
+.container.pseudoelement {
+    text-align: center;
+    font-size: 30px;
+}
+.container.pseudoelement p::selection {
+    background: #ffff00;
+    color: #ff0000;
+}
+.container.pseudoelement p::first-line {
+    font-variant: small-caps;
+}
+.container.pseudoelement p::first-letter {
+    color: #ff0000;
+    font-size: 2.5rem;
+}
+.container.pseudoelement p::before,
+.container.pseudoelement p::after {
+    content: " - ";
+}
+.container.transparent p {
+    text-align: center;
+}
+.container.transparent img {
+    display: block;
+    margin: auto;
+    opacity: .5;
+}
+.container.transparent img:hover {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
