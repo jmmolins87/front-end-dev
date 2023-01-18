@@ -1,0 +1,163 @@
+body {
+    height: 500vh;
+    position: relative;
+}
+h1, h2 {
+    text-align: center;
+    color: crimson;
+}
+.italic-bold {
+    font-style: italic;
+    font-weight: bold;
+}
+div {
+    width: 50%;
+    border: 1px solid firebrick;
+    margin: 0 auto;
+    padding: 10px;
+}
+section {
+    background: #fff;
+}
+.p-relative {
+    position: relative;
+    top: -10px;
+    left: 50px;
+}
+.p-fixed {
+    position: fixed;
+    padding: 10px;
+    max-width: 200px;
+    top: 65px;
+    left: 40px;
+    z-index: 2;
+    box-shadow: 0px 0px 15px #d3d3d3;
+    background: #fff;
+}
+.p-fixed div {
+    width: auto;
+}
+.sec-pos-absolute {
+    position: relative;
+    height: 200px;
+    background: #dddddd;
+}
+.p-absolute {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    bottom: 0;
+}
+.p-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding-top: 40px;
+}
+.z-index {
+    position: relative;
+    top: -10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(1px);
+    z-index: 1;
+}
+.z-indiex-absolute {
+    position: absolute;
+    bottom: -35px;
+    right: 0;
+    font-weight: 300;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(1px);
+}
+.img-text-center {
+    margin-top: 40px;
+}
+.img-text-center .container {
+    position: relative;
+    border: 3px dashed greenyellow;
+    width: 30%;
+    margin: auto;
+}
+.img-text-center .container .img {
+    width: 100%;
+    opacity: .2;
+}
+.img-text-center .container .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 700;
+}
+.overflow {
+    margin: 40px auto;
+    border: 3px dashed greenyellow;
+    width: 30%;
+}
+.overflow .container {
+    max-height: 140px;
+    overflow: auto;
+}
+.overflow .container span {
+    display: block;
+}
+.float {
+    border: 3px dashed greenyellow;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+.float .container {
+    width: 30%;
+    float: left;
+    margin: 5px;
+}
+.float .floated {
+    border: none;
+    clear: both;
+}
+.float .floated .container.floated.container-one {
+    border: 3px dashed green;
+    float: left;
+}
+.float .floated .container.floated.container-two {
+    border: 3px dashed blue; 
+    float: right;
+}
+.float .floated .container.floated.container-three {
+    border: 3px dashed orange;
+    margin: auto;
+}
+.display-inline-block .container {
+    width: 80%;
+    height: 20%;
+    overflow: auto;
+    margin: auto;
+    border: 3px dashed #a8dadc;
+}
+.display-inline-block .container span {
+    font-weight: bolder;
+    font-style: italic;
+    font-size: larger;
+    background: #a8dadc;
+    border: 1px solid #457b9d;
+    height: 50px;
+    padding: 5px;
+    display: inline-block;
+}
+.display-inline-block nav ul {
+    text-align: center;
+}
+.display-inline-block nav ul li {
+    display: inline-block;
+    margin: 20px;
+    padding: 15px;border-radius: 5px;
+    background: #e63946;
+    cursor: pointer;
+}
+.display-inline-block nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
