@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+    color: #e63946;
+    text-shadow: 2px 2px 2px #a8dadc;
+}
+.container {
+    display: flex;
+    box-sizing: border-box;
+    /* Es lo mismo flex-direction y flex-wrap que flex-flow */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 300px;
+    background: #560bad;
+    /* El baseline se alinea dependiendo del contenido de cada item, en este caso párrafo */
+    /* align-items: baseline; */
+    align-items: center;
+    align-content: center;
+}
+.container > p {
+    background: #4895ef;
+    color: #f1faee;
+    margin: 20px;
+    padding: 15px;
+    font-size: 1.5em;
+}
+.container p:nth-of-type(1) {
+    order: 3;
+    flex-grow: 1;
+}
+.container p:nth-of-type(2) {
+    order: 1;
+    flex-grow: 1;
+}
+.container p:nth-of-type(3) {
+    order: 2;
+    flex-grow: 10;
+}
+.container p:nth-of-type(3),
+.container p:nth-of-type(4) {
+    height: 50%;
+}
+/* .container p:nth-of-type(1) {
+    font-size: 30px;
+} */
