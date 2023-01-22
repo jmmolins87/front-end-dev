@@ -14,7 +14,7 @@ var person = {
     direction: {
         city: 'Madrid',
         country: 'Spain'
-    } 
+    }
 }
 console.log( person.direction.city );
 console.log( typeof person );
