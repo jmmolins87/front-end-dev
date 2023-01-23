@@ -5,7 +5,7 @@ if ( 2 > 3 ) {
 } else {
     console.log( `es falso` );
 }
-// else if
+// Sentencia de control else if
 let numberElseIf = 3;
 if ( numberElseIf == 1 ) {
     console.log( `El número es 1` );
@@ -20,14 +20,14 @@ if ( numberElseIf == 1 ) {
 }
 // *********************
 // ***** TEST ESTACIÓN DEL AÑO *****
-let month = 11, season;
-if ( month == 1 || month == 2 || month == 12 ) {
+let monthElsIf = 11, seasonElsIf;
+if ( monthElsIf == 1 || monthElsIf == 2 || monthElsIf == 12 ) {
     season = 'Invierno'
-} else if ( month == 3 || month == 4 || month == 5 ) {
+} else if ( monthElsIf == 3 || monthElsIf == 4 || monthElsIf == 5 ) {
     season = 'Primavera'
-} else if ( month == 6 || month == 7 || month == 8 ) {
+} else if ( monthElsIf == 6 || monthElsIf == 7 || monthElsIf == 8 ) {
     season = 'Verano'
-} else if ( month == 9 || month == 10 || month == 11 ) {
+} else if ( monthElsIf == 9 || monthElsIf == 10 || monthElsIf == 11 ) {
     season = 'Otoño'
 } else  {
     season = 'Valor incorrecto';
@@ -47,4 +47,46 @@ if ( hour >= 6 && hour <= 11 ) {
     greeting = 'Esa hora no es válida'
 }
 console.log( greeting );
+// *********************
+// Sentencia de control switch
+let numSwitch = 3;
+let numTextSwitch = `Valor desconocido`;
+switch ( numSwitch ) {
+    case 1:
+        numTextSwitch = `Número uno`;
+        break;
+    case 2:
+        numTextSwitch = `Número dos`;
+        break;
+    case 3:
+        numTextSwitch = `Número tres`;
+        break;
+    case 4:
+        numTextSwitch = `Número cuatro`;
+    default:
+        numTextSwitch = `El número no es válido`;
+        break;
+}
+console.log( numTextSwitch );
+// *********************
+// ***** TEST ESTACIÓN DEL AÑO *****
+let monthSwitch = 11, seasonSwitch;
+switch ( monthSwitch ) {
+    case 1: case 2: case 12: 
+        seasonSwitch = `Invierno`;
+        break;
+    case 3: case 4: case 5:
+        seasonSwitch = `Primavera`;
+        break;
+    case 6: case 7: case 8:
+        seasonSwitch = `Verano`;
+        break;
+    case 9: case 10: case 11:
+        seasonSwitch = `Otoño`;
+        break;
+    default:
+        seasonSwitch = `No es un mes válido`;
+        break;
+}
+console.log( seasonSwitch );
 // *********************
