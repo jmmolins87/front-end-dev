@@ -70,3 +70,5 @@ console.log( personStaticClass.MAX_OBJ );
 // Modificamos el valor pero no cambia
 personStaticClass.MAX_OBJ = 10;
 console.log( personStaticClass.MAX_OBJ );
+let employeeStaticWordUseThree = new employeeStaticWordUse( 'Carolina', 'Pérez', 'Ventas' );
+console.log( employeeStaticWordUseThree );
