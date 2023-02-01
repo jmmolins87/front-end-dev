@@ -18,7 +18,7 @@ class PersonClassGetSet {
     get nameGet() {
         return this.name;
     }
-    // Modificamosel valor con SET
+    // Modificamos el valor con SET
     set nameSet( name ) {
         this.name = name;
     }
