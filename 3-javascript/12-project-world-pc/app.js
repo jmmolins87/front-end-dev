@@ -30,6 +30,8 @@ class MousePcWorld extends InputDevicePcWorld {
         \n Marca del producto: ${ this.brand }`
     }
 }
+let mouseOne = new MousePcWorld( 'USB', 'Acer' );
+let mouseTwo = new MousePcWorld( 'Cable', 'Lenovo' );
 class KeyboardPcWorld extends InputDevicePcWorld {
     static keyboardCount = 0;
     constructor( inputType, brand ) {
@@ -44,6 +46,8 @@ class KeyboardPcWorld extends InputDevicePcWorld {
         \n Marca del producto: ${ this.brand }`
     }
 }
+let keyboardOne = new KeyboardPcWorld( 'Bluetooth', 'MSI' );
+let keyboardTwo = new KeyboardPcWorld( 'USB-C', 'Apple' );
 class MonitorPcWorld {
     static monitorCount = 0;
     constructor( brand, size ) {
@@ -59,6 +63,8 @@ class MonitorPcWorld {
         \n El tamaño del producto es: ${ this.size } pulgadas`
     }
 }
+let monitorOne = new MonitorPcWorld( 'Samsung', 24 );
+let monitorTwo = new MonitorPcWorld( 'Samsung', 19 );
 class ComputerPcWorld {
     static computerCount = 0;
     constructor( name, monitor, keyboard, mouse ) {
@@ -77,13 +83,29 @@ class ComputerPcWorld {
         \n ${ this.mouse }`
     }
 }
-let mouseOne = new MousePcWorld( 'USB', 'Acer' );
-let mouseTwo = new MousePcWorld( 'Cable', 'Lenovo' );
-let keyboardOne = new KeyboardPcWorld( 'Bluetooth', 'MSI' );
-let keyboardTwo = new KeyboardPcWorld( 'USB-C', 'Apple' );
-let monitorOne = new MonitorPcWorld( 'Samsung', 24 );
-let monitorTwo = new MonitorPcWorld( 'Samsung', 19 );
 let computerOne = new ComputerPcWorld( 'Hp', monitorOne.message(), keyboardOne.message(), mouseOne.message());
 let computerTwo = new ComputerPcWorld( 'Apple', monitorTwo.message(), keyboardTwo.message(), mouseTwo.message());
+class OrderPcWorld {
+    static orderCount = 0;
+    constructor() {
+        this.orderCountId = OrderPcWorld.orderCount;
+        this.computers = [];
+    }
+    get inOrder() { return this.orderCountId; }
+    addComputers( computer ) {
+        this.computers.push( computer );
+    }
+    showOrders() {
+        let computerOrder = '';
+        for( let computer of this.computers ) {
+            computerOrder += `\n ${ computer }`
+        }
+        console.log( `Orden: ${ this.order }, computadoras: ${ this.computerOrder }` );
+    }
+}
 console.log( computerOne.message());
 console.log( computerTwo.message());
+let orderOne = new OrderPcWorld( );
+orderOne.addComputers( computerOne );
+orderOne.addComputers( computerTwo );
+console.log( orderOne );
