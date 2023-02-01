@@ -78,6 +78,7 @@ class ClientTestInheritance extends PersonTestInheritance {
     }
     /**
      * @param {any} date
+     * @param {any} registerDate
      */
     set registerDateSet( registerDate ) {
         this.registerDate = registerDate;
