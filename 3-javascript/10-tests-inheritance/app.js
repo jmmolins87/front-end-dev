@@ -73,7 +73,7 @@ console.log( employeeInheritanceOne.message());
 let employeeInheritanceTwo = new EmployeeInheritance( 'Carolina', 'Pérez', 38, 2000 );
 console.log( employeeInheritanceTwo.message());
 // Test Client
-let clientInheritanceOne = new ClientInheritance( 'Juanma', 'Molins', 35, new Date() );
+let clientInheritanceOne = new ClientInheritance( 'Juanma', 'Molins', 35, new Date());
 console.log( clientInheritanceOne.message());
-let clientInheritanceTwo = new ClientInheritance( 'Carolina', 'Pérez', 38, new Date() );
+let clientInheritanceTwo = new ClientInheritance( 'Carolina', 'Pérez', 38, new Date());
 console.log( clientInheritanceOne.message());
