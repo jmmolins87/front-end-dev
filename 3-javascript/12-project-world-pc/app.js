@@ -14,65 +14,65 @@ class InputDevicePcWorld {
     /**
      * @param {any} brand
      */
-    set brandSet( brand ) { this.brand = brand; };
+    set brandSet( brand ) { this.brand = brand; }
 }
-class MousePcWorld extends InputDevicePcWorld {
-    static mouseCount = 0;
+class MouseDevicePcWorld extends InputDevicePcWorld {
+    static mouseDeviceCount = 0;
     constructor( inputType, brand ) {
         super( inputType, brand );
-        this.mouseCountId = ++ MousePcWorld.mouseCount;
+        this.mouseDeviceCountId = ++ MouseDevicePcWorld.mouseDeviceCount;
     }
-    get mouseCountGet() { return this.mouseCount };
+    get mouseDeviceCountIdGet() { return this.mouseDeviceCountId };
     message() {
-        return `Mouse ->
-        \n Id de producto: ${ this.mouseCountId };
-        \n Tipo de entrada: ${ this.inputType };
-        \n Marca del producto: ${ this.brand }`
+        return `Características del Mouse ->
+        \n El id del producto es: ${ this.mouseDeviceCountId };
+        \n El tipo de entrada es: ${ this.inputType };
+        \n Su marca es: ${ this.brand }`
     }
 }
-let mouseOne = new MousePcWorld( 'USB', 'Acer' );
-let mouseTwo = new MousePcWorld( 'Cable', 'Lenovo' );
-class KeyboardPcWorld extends InputDevicePcWorld {
-    static keyboardCount = 0;
+let mouseOne = new MouseDevicePcWorld( 'USB', 'Acer' );
+let mouseTwo = new MouseDevicePcWorld( 'Bluetooth', 'Apple' );
+class KeyboardDevicePcWorld extends InputDevicePcWorld {
+    static keyboardDeviceCount = 0;
     constructor( inputType, brand ) {
         super( inputType, brand );
-        this.keyboardCountId = ++ KeyboardPcWorld.keyboardCount;
+        this.keyboardDeviceCountId = ++ KeyboardDevicePcWorld.keyboardDeviceCount;
     }
-    get keyboardCountGet() { return this.keyboardCount };
+    get keyboardDeviceCountIdGet() { this.inputDeviceCountId };
     message() {
-        return `Teclado ->
-        \n Id de producto: ${ this.keyboardCountId };
-        \n Tipo de entrada: ${ this.inputType };
-        \n Marca del producto: ${ this.brand }`
+        return `Características del Teclado ->
+        \n El id del producto es: ${ this.keyboardDeviceCountId };
+        \n El tipo de entrada es: ${ this.inputType };
+        \n Su marca es: ${ this.brand }`
     }
 }
-let keyboardOne = new KeyboardPcWorld( 'Bluetooth', 'MSI' );
-let keyboardTwo = new KeyboardPcWorld( 'USB-C', 'Apple' );
-class MonitorPcWorld {
-    static monitorCount = 0;
+let keyboardOne = new KeyboardDevicePcWorld( 'Bluetooth', 'MSI' );
+let keyboardTwo = new KeyboardDevicePcWorld( 'Bluetooth', 'Apple' );
+class MonitorDevicePcWorld {
+    static monitorDeviceCount = 0;
     constructor( brand, size ) {
         this.brand = brand;
         this.size = size;
-        this.monitorCountId = ++ MonitorPcWorld.monitorCount;
+        this.monitorDeviceCountId = ++ MonitorDevicePcWorld.monitorDeviceCount;
     }
-    get monitorGet() { return this.monitor };
+    get monitorDeviceCountIdGet() { return this.monitorDeviceCountId; }
     message() {
-        return `Monitor ->
-        \n Id de producto: ${ this.monitorCountId };
-        \n Marca del producto: ${ this.brand }
-        \n El tamaño del producto es: ${ this.size } pulgadas`
+        return `Características del Teclado ->
+        \n El id del producto es: ${ this.monitorDeviceCountId };
+        \n Su marca es: ${ this.brand };
+        \n Tiene un tamaño de: ${ this.size } pulgadas`
     }
 }
-let monitorOne = new MonitorPcWorld( 'Samsung', 24 );
-let monitorTwo = new MonitorPcWorld( 'Samsung', 19 );
+let monitorOne = new MonitorDevicePcWorld ('Samsung', '19' );
+let monitorTwo = new MonitorDevicePcWorld ('LG', '21' );
 class ComputerPcWorld {
     static computerCount = 0;
-    constructor( name, monitor, keyboard, mouse ) {
+    constructor( name, monitor, mouse, keyboeard ) {
+        this.computerCountId = ++ ComputerPcWorld.computerCount;
         this.name = name;
         this.monitor = monitor;
-        this.keyboard = keyboard;
         this.mouse = mouse;
-        this.computerCountId = ++ ComputerPcWorld.computerCount;
+        this.keyboeard = keyboeard;
     }
     message() {
         return `Ordenador ->
@@ -83,8 +83,8 @@ class ComputerPcWorld {
         \n ${ this.mouse }`
     }
 }
-let computerOne = new ComputerPcWorld( 'Hp', monitorOne.message(), keyboardOne.message(), mouseOne.message());
-let computerTwo = new ComputerPcWorld( 'Apple', monitorTwo.message(), keyboardTwo.message(), mouseTwo.message());
+let computerOne = new ComputerPcWorld( 'Apple', mouseOne.message(), keyboardOne.message(), monitorOne.message());
+let computerTwo = new ComputerPcWorld( 'Apple', mouseTwo.message(), keyboardTwo.message(), monitorTwo.message());
 class OrderPcWorld {
     static orderCount = 0;
     constructor() {
@@ -103,8 +103,6 @@ class OrderPcWorld {
         console.log( `Orden: ${ this.order }, computadoras: ${ this.computerOrder }` );
     }
 }
-console.log( computerOne.message());
-console.log( computerTwo.message());
 let orderOne = new OrderPcWorld( );
 orderOne.addComputers( computerOne );
 orderOne.addComputers( computerTwo );
