@@ -28,3 +28,13 @@ async function myAsyncFunctionAwait() {
     console.log( await myPromise );
 }
 myAsyncFunctionAwait();
+// async con await y setTimeout
+async function myFunctionAsyncAwaitSetTimeout() {
+    let myPromise = new Promise( resolve => {
+        setTimeout(() => resolve( `Se resolvió el problema` ), 1500);
+    })
+    console.log( await myPromise );
+    // Como tenemos el await, no se va a imprimir el siguiente console.log hasta que se imprima el de antes
+    console.log( `Fin de la función` );
+}
+myFunctionAsyncAwaitSetTimeout()
