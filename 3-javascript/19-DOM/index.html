@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM con JavaScript</title>
+</head>
+<body>
+    <h1 id="title">Ejemplo Dom con JS</h1>
+    <p id="description">Saludos!!</p>
+    <button onclick="changeText()">Cambiar texto</button>
+
+    <!-- La etiqueta script suele ir al final del body, por lo menos después de los elementos que queremos manipular -->
+    <script>
+        let getDescription = document.getElementById( 'description' );
+        let getTitle = document.getElementById( 'title' );
+        console.log( `Valor del título: ${ getDescription.innerHTML }` );
+        console.log( `Valor de la descripción: ${ getTitle.innerHTML }` );
+        function changeText() {
+            getDescription.innerHTML = `Adiós!!`;
+        }
+    </script>
+</body>
+</html>
