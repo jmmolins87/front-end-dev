@@ -10,6 +10,16 @@
     <h1 id="title">Manejo de eventos en JS</h1>
     <div id="content"></div>
 
+    <!-- Evento onchange -->
+    <div class="content-input">
+        <span>Nombre:</span>
+        <input type="text" onchange="convert( this )">
+    </div>
+    <!-- Evento onmouseover/onmouseout -->
+    <p id="toRedText" onmouseover="changeTextRed()" onmouseout="changeTextOriginal()">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, consequuntur?</p>
+    <!-- Evento onmousedown/onmouseup -->
+    
+
     <script>
         document.getElementById( 'title' ).onclick = changeContent;
         function changeContent() {
@@ -22,8 +32,21 @@
             } else {
                 text = 'Las cookies no están habilitadas'
             }
-            document.getElementById( 'content' ).innerHTML = text
+            document.getElementById( 'content' ).innerHTML = text;
         }
+        // Evento onchange
+        function convert( inputname ) {
+            inputname.value = inputname.value.toUpperCase();
+        }
+        // Evento onmouseover/onmouseout
+        function changeTextRed() {
+            let redText = document.getElementById( 'toRedText' ).style.color = 'red';
+        }
+        function changeTextOriginal() {
+            let originalText = document.getElementById( 'toRedText' ).style.color = 'black';
+        }
+        // Evento onmousedown/onmouseup
+
     </script>
 </body>
 </html>
