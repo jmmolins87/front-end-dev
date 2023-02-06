@@ -5,20 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM con JavaScript</title>
+    <style>
+        .blue { color: #0000ff; }
+        .red { color: #ff0000; }
+    </style>
 </head>
 <body>
-    <h1 id="title">Ejemplo Dom con JS</h1>
-    <p id="description">Saludos!!</p>
+    <h1 id="title" class="red">Ejemplo Dom con JS</h1>
+    <button onclick="changeTitle()">Cambiar título</button>
+    <p id="descriptionOne" class="blue">Saludos!!</p>
     <button onclick="changeText()">Cambiar texto</button>
-
+    <p id="descriptionTwo" class="blue">Saludos otra vez!!</p>
     <!-- La etiqueta script suele ir al final del body, por lo menos después de los elementos que queremos manipular -->
     <script>
-        let getDescription = document.getElementById( 'description' );
+        // Manipulación del DOM con getElementById
         let getTitle = document.getElementById( 'title' );
+        let getDescription = document.getElementById( 'descriptionOne' );
         console.log( `Valor del título: ${ getDescription.innerHTML }` );
         console.log( `Valor de la descripción: ${ getTitle.innerHTML }` );
+        function changeTitle() {
+            getTitle.innerHTML = `Nuevo título de la página DOM con JS`;
+        }
         function changeText() {
             getDescription.innerHTML = `Adiós!!`;
+        }
+        // Manipulación del DOM con getElementByTagName
+        let getDescriptions = document.getElementsByTagName( 'p' );
+        console.log( `Nº de párrafos: ${ getDescriptions.length }` );
+        for( let i = 0; i < getDescriptions.length; i++ ) {
+            console.log( `${ i + 1 } - ${ getDescriptions[ i ].innerHTML }` );
+        }
+        // Manipulación del DOM con getElementByClassName
+        let getTextsBlue = document.getElementsByClassName( 'blue' );
+        console.log( `Nº de textos azules: ${ getTextsBlue.length }` );
+        console.log( `Este es el contenido de los textos azules:` );
+        for( let textBlue of getTextsBlue ) {
+            console.log( `${ textBlue.innerHTML }` );
+        }
+        // Manipulación del DOM con querySelectorAll
+        let getPharagraphsBlue = document.querySelectorAll( 'p.blue' );
+        console.log( `Nº de párrafos azules: ${ getPharagraphsBlue.length }`);
+        console.log( `Este es el contenido de los párrafos azules:` );
+        for ( let pharagraphBlue of getPharagraphsBlue ) {
+            console.log( `${ pharagraphBlue.innerHTML }` );
+        }
+        let titlesRedQuery = document.querySelectorAll( 'h1.red ');
+        console.log( `Nº de etiquetas h1 con la clase red en este documento: ${ titlesRedQuery.length }` );
+        console.log( `Este es el contenido de la etiqueta h1 con la clase red:`);
+        for( let titleRedQuery of titlesRedQuery) {
+            console.log( `${ titleRedQuery.innerHTML }` );
         }
     </script>
 </body>

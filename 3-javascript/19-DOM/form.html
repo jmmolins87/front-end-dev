@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario con JS</title>
+    <style>
+        form {
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .content-input {
+            display: flex;
+            box-sizing: border-box;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .content-input span {
+            width: 65px;
+        }
+        .content-input:first-of-type {
+            margin-top: 0;
+        }
+        .content-button {
+            margin-top: 20px;
+        }
+        .documentWrite,
+        .changeAtributeHtml,
+        .changeCss {
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: column;
+            max-width: 100px;
+        }
+        .documentWrite button,
+        .changeAtributeHtml button,
+        .changeCss button {
+            margin-bottom: 20px;
+        }
+        .changeCss p {
+            color: red;
+        }
+        .changeAtributeHtml img {
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form" action="">
+        <div class="content-input">
+            <span>Nombre:</span>
+            <input type="text" name="name" value="Juanma">
+        </div>
+        <div class="content-input">
+            <span>Apellido:</span>
+            <input type="text" name="surname" value="Molins">
+        </div>
+    </form>
+    <div class="content-button">
+        <button onclick="showAllValors()">Mostrar</button>
+    </div>
+    <p id="valors"></p>
+
+    <!-- Uso de document.write() -->
+    <div class="documentWrite">
+        <!-- Cambio de contenido del DOM HTML -->
+        <h2 id="title">Manejo del Dom con JS</h2>
+        <button onclick="changeContent()">Cambiar texto del título</button>
+        <button onclick="addContent()">Añadir texto al título</button>
+        <button onclick="showText()">Cambiar contenido</button>
+    </div>
+    <!-- Cambio del valor de atributos HTML -->
+    <div class="changeAtributeHtml">
+        <img id="img" src="./img/javascript.png" alt="JS" title="JS">
+        <button onclick="changeImg()">Cambiar la imágen</button>
+    </div>
+    <!-- Cambio del estilos CSS con JS -->
+    <div class="changeCss">
+        <p id="pharagraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, corrupti!</p>
+        <button onclick="changeCss()">Cambiar el color del parágrafo</button>
+    </div>
+
+    <script>
+        // Accedemos en todos los elementos del formulario
+        function showAllValors() {
+            let form = document.forms[ 'form' ]; // Nos devuelve un arreglos
+            let text = '';
+            for( let element of form ) {
+                text += element.value + '<br />';
+            }
+            document.getElementById( 'valors' ).innerHTML = text;
+        }
+        // Accedemos de forma individual a los elementos del formulario
+        function showIndividualValors() {
+            let form = document.forms[ 'form' ]; // Nos devuelve un arreglos
+            let text = '';
+            let name = form[ 'name' ];
+            console.log( name );
+            let surname = form[ 'surname' ];
+            console.log( surname );
+            text = `${ name.value } ${ surname.value }`;
+            console.log( text );
+        }
+        showIndividualValors()
+        // Uso de document.write()
+        document.write( `Saludos desde JS` );
+        function showText() {
+            document.write( `Adiós!!` );
+        }
+        // Cambio de contenido del DOM HTML
+        function changeContent() {
+            document.getElementById( 'title' ).innerHTML = 'Nuevo título';
+        }
+        function addContent() {
+            document.getElementById( 'title' ).innerHTML += ' Nuevo título añadido';
+        }
+        // Cambio del valor de atributos HTML
+        function changeImg() {
+            document.getElementById( 'img' ).src = './img/html5.png'
+        }
+        // Cambio del estilos CSS con JS
+        function changeCss() {
+            document.getElementById( 'pharagraph' ).style.color = 'aqua';
+        }
+    </script>
+</body>
+</html>
