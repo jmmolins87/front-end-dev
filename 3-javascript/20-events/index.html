@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos en JS</title>
+</head>
+<body onload="getIn()">
+    <h1 id="title">Manejo de eventos en JS</h1>
+    <div id="content"></div>
+
+    <script>
+        document.getElementById( 'title' ).onclick = changeContent;
+        function changeContent() {
+            document.getElementById( 'content' ).innerHTML = 'Nuevo contenido de manejo de eventos en JS';
+        }
+        function getIn() {
+            let text = '';
+            if( navigator.cookieEnabled ) {
+                text = 'Las cookies están habilitadas'
+            } else {
+                text = 'Las cookies no están habilitadas'
+            }
+            document.getElementById( 'content' ).innerHTML = text
+        }
+    </script>
+</body>
+</html>
