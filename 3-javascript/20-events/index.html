@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos en JS</title>
+    <style>
+        .content-input span {
+            display: inline-block;
+            width: 60px;
+        }
+        .add-event .content-input:first-of-type {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body onload="getIn()">
+    <h1 id="title">Manejo de eventos en JS</h1>
+    <div id="content"></div>
+
+    <!-- Evento onchange -->
+    <div class="content-input">
+        <span>Nombre:</span>
+        <input type="text" onchange="convert( this )">
+    </div>
+    <!-- Evento onmouseover/onmouseout -->
+    <p id="toRedText" onmouseover="changeTextRed()" onmouseout="changeTextOriginal()">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, consequuntur?</p>
+    <!-- Evento onmousedown/onmouseup -->
+    <p id="toBlueText" onmousedown="changeTextBlue()" onmouseup="changeTextGreen()">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, consequuntur?</p>
+    <!-- Evento onfocus/onblur -->
+    <div class="content-input">
+        <span>Nombre:</span>
+        <input type="text" onfocus="changeFocus( this )" onblur="changeBack( this )" />
+    </div>
+    <hr>    
+    <!-- Método addEventListener -->
+    <div class="add-event">
+        <div class="content-input">
+            <span>Nombre:</span>
+            <input type="text" id="name" />
+        </div>
+        <div class="content-input">
+            <span>Apellido:</span>
+            <input type="text" id="surname" />
+        </div>
+    </div>
+
+    <script>
+        document.getElementById( 'title' ).onclick = changeContent;
+        function changeContent() {
+            document.getElementById( 'content' ).innerHTML = 'Nuevo contenido de manejo de eventos en JS';
+        }
+        function getIn() {
+            let text = '';
+            if( navigator.cookieEnabled ) {
+                text = 'Las cookies están habilitadas'
+            } else {
+                text = 'Las cookies no están habilitadas'
+            }
+            document.getElementById( 'content' ).innerHTML = text;
+        }
+        // Evento onchange
+        function convert( inputname ) {
+            inputname.value = inputname.value.toUpperCase();
+        }
+        // Evento onmouseover/onmouseout
+        function changeTextRed() {
+            let redText = document.getElementById( 'toRedText' ).style.color = 'red';
+        }
+        function changeTextOriginal() {
+            let originalText = document.getElementById( 'toRedText' ).style.color = 'black';
+        }
+        // Evento onmousedown/onmouseup
+        // Al pulsar el texto se convierte a azul
+        function changeTextBlue() {
+            let redText = document.getElementById( 'toBlueText' ).style.color = 'blue';
+        }
+        // Al dejar de pulsar el texto se convierte a verde
+        function changeTextGreen() {
+            let originalText = document.getElementById( 'toBlueText' ).style.color = 'green';
+        }
+        // Evento onfocus/onblur
+        // Al tener el foco se pinta el fondo de color amarillo
+        function changeFocus( inputElement ) {
+            inputElement.style.background = 'yellow';
+        }
+        // Al quitar el foco se vuelve el fondo transparente
+        function changeBack( inputElement ) { 
+            inputElement.style.background = 'transparent';
+        }
+        // Método addEventListener -> podemos configurar los metodos anteriores desde JS
+        // document.getElementById( 'name' ).addEventListener( 'focus', changeAddEventListener );
+        document.getElementById( 'name' ).addEventListener( 'blur', backAddEventListener );
+        document.getElementById( 'surname' ).addEventListener( 'focus', changeAddEventListener );
+        document.getElementById( 'surname' ).addEventListener( 'blur', backAddEventListener );
+        function changeAddEventListener( e ) {
+            let component = e.target;
+            component.style.background = 'yellow';
+        }
+        function backAddEventListener( e ) {
+            let component = e.target;
+            component.style.background = 'transparent';
+        }
+        // Método addEventListener función de flecha
+        document.getElementById( 'name' ).addEventListener('focus', ( e ) => {
+            e.target.style.background = 'pink';
+        });
+        // Delegación de eventos
+        
+
+    </script>
+</body>
+</html>
