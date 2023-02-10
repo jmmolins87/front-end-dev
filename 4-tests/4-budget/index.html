@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Aplicación de Presupuestos</title>
+</head>
+<body onload="appLoad()">
+    <header class="header">
+        <div class="budget">
+            <h1 class="budget-title">Presupuesto Disponible</h1>
+            <h3 id="budget" class="budget-valor"></h3>
+            <div class="budget-income clean-styles">
+                <h5 class="budget-income--text">Ingresos</h5>
+                <div class="right">
+                    <p id="income" class="budget-income--valor"></p>
+                    <p class="budget-income--percentage">&nbsp;</p>
+                </div>
+            </div>
+            <div class="budget-bills clean-styles">
+                <h5 class="budget-bills--text">Gastos</h5>
+                <div class="right">
+                    <p id="bills" class="budget-bills--valor"></p>
+                    <p id="percentage-bills" class="budget-bills--percentage">45%</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container clean-styles">
+        <div class="income">
+            <h2 class="income-title">Ingresos</h2>
+            <ul id="income-list">
+                <li class="element clean-styles no-styles-list">
+                    <span>Salario</span>
+                    <div class="right clean-styles">
+                        <span class="element-value">+2,200.00</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/income.js"></script>
+    <script src="./js/bills.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
