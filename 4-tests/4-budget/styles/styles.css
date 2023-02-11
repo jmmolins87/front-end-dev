@@ -28,9 +28,9 @@ body {
     padding-top: 150px;
     padding-bottom: 100px;
     color: #fff;
-    background: url('./../img/bg.png'), #7b4397;
-    background: url('./../img/bg.png'), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430));
-    background: url('./../img/bg.png'), linear-gradient(to left, #7b4397, #dc2430)
+    background: url( './../img/bg.png' ), #7b4397;
+    background: url( './../img/bg.png' ), -webkit-gradient( linear, right top, left top, from( #7b4397 ), to( #dc2430 ));
+    background: url( './../img/bg.png' ), linear-gradient( to left, #7b4397, #dc2430 )
 }
 .budget {
     position: absolute;
@@ -170,6 +170,8 @@ h2 {
 .income-title { color: #28B9B5; }
 .bills-title{ color: #FF5049; }
 .element {
+    height: 50px;
+    max-height: 50px;
     padding: 13px;
     border-bottom: 1px solid #e7e7e7;
 }
@@ -218,9 +220,9 @@ h2 {
 }
 .element-delete--btn:focus { outline: none; }
 .element-delete--btn:active { transform: translateY(2px); }
-.elemento:hover .element-delete--btn { display: block; }
-.elemento:hover .element-value { transform: translateX(-20px); }
-.elemento:hover .element-percentatge { transform: translateX(-20px); }
+.element:hover .element-delete--btn { display: block; }
+.element:hover .element-value { transform: translateX(-20px); }
+.element:hover .element-percentatge { transform: translateX(-20px); }
 
 
 

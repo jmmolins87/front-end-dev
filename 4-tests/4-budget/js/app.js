@@ -39,3 +39,10 @@ const CURRENCYFORMAT = ( value ) => {
 const PERCENTATGEFORMAT = ( value ) => {
     return value.toLocaleString( 'es-ES', { style: 'percent', minmunFractionDigits: 2 });
 }
+const LOADINCOME = () => {
+    let incomeHtml = '';
+    for( let income of INCOMES ) {
+        incomeHtml += LOADINCOME( income );
+    }
+    document.getElementById( 'income-list' ).innerHTML = incomeHtml;
+}
