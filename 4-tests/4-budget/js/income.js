@@ -1,8 +1,8 @@
 class Income extends Data {
-    static incomeCount = 0;
+    static incomesCount = 0;
     constructor( description, value ) {
         super( description, value );
-        this.id = ++ Income.incomeCount;
+        this.id = ++ Income.incomesCount;
     }
     get idGet() { return this.id; }
 }

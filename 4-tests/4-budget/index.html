@@ -14,85 +14,65 @@
     <header class="header">
         <div class="budget">
             <h1 class="budget-title">Presupuesto Disponible</h1>
-            <h3 id="budget" class="budget-valor"></h3>
+            <h3 id="budget" class="budget-value"></h3>
             <div class="budget-income clean-styles">
                 <h5 class="budget-income--text">Ingresos</h5>
                 <div class="right">
-                    <p id="income" class="budget-income--valor"></p>
+                    <p id="income" class="budget-income--value"></p>
                     <p class="budget-income--percentage">&nbsp;</p>
                 </div>
             </div>
             <div class="budget-bills clean-styles">
                 <h5 class="budget-bills--text">Gastos</h5>
                 <div class="right">
-                    <p id="bills" class="budget-bills--valor"></p>
+                    <p id="bills" class="budget-bills--value"></p>
                     <p id="percentage-bills" class="budget-bills--percentage">45%</p>
                 </div>
             </div>
         </div>
     </header>
+    <form onsubmit="return false" id="form">
+        <div class="add">
+            <div class="add-container">
+                <select id="type" class="add-type">
+                    <option value="income">+</option>
+                    <option value="bill">-</option>
+                </select>
+                <input 
+                    type="text" 
+                    id="description" 
+                    class="add-description" 
+                    placeholder="Agregar una descripción">
+                <input 
+                    type="number" 
+                    id="value"
+                    class="add-value"
+                    placeholder="Valor"
+                    step="any">
+                <button onclick="addData()" class="add-btn">
+                    <ion-icon name="add-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </form>
     <div class="container clean-styles">
         <div class="income">
             <h2 class="income-title">Ingresos</h2>
             <ul id="income-list">
-                <li class="element clean-styles no-styles-list">
-                    <span class="element-description">Salario</span>
-                    <div class="right clean-styles">
-                        <span class="element-value">+2,200.00</span>
-                        <div class="element-delete">
-                            <button class="element-delete--btn">
-                                <ion-icon name="trash-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li class="element clean-styles no-styles-list">
-                    <span class="element-description">Venta del coche</span>
-                    <div class="right clean-styles">
-                        <span class="element-value">+1,500.00</span>
-                        <div class="element-delete">
-                            <button class="element-delete--btn">
-                                <ion-icon name="trash-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                </li>
+                <!-- Se carga dinámicamente desde JS- -->
             </ul>
         </div>
         <div class="bills">
             <h2 class="bills-title">Gastos</h2>
             <ul id="bills-list">
-                <li class="element clean-styles no-styles-list">
-                    <span class="element-description">Alquiler piso</span>
-                    <div class="right clean-styles">
-                        <span class="element-value">-900</span>
-                        <span class="element-percentatge">21%</span>
-                        <div class="element-delete">
-                            <button class="element-delete--btn">
-                                <ion-icon name="trash-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li class="element clean-styles no-styles-list">
-                    <span class="element-description">Comprar ropa</span>
-                    <div class="right clean-styles">
-                        <span class="element-value">-400</span>
-                        <span class="element-percentatge">21%</span>
-                        <div class="element-delete">
-                            <button class="element-delete--btn">
-                                <ion-icon name="trash-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                </li>
+                <!-- Se carga dinámicamente desde JS- -->
             </ul>
         </div>
     </div>
 
     <script src="./js/data.js"></script>
     <script src="./js/income.js"></script>
-    <script src="./js/bills.js"></script>
+    <script src="./js/bill.js"></script>
     <script src="./js/app.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
